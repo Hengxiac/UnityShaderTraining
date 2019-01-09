@@ -19,10 +19,10 @@ public struct skybox {
             }
             m_mesh = new Mesh();
             m_mesh.vertices = new Vector3[] {
-                new Vector3(-1, -1, 0),
-                new Vector3(1, -1 ,0),
-                new Vector3(1, 1, 0),
-                new Vector3(-1, 1, 0)
+                new Vector4(-1, -1, 0, 1),
+                new Vector4(-1, 1 , 0 ,1),
+                new Vector4(1, 1, 0, 1),
+                new Vector4(1, -1, 0, 1)
             };
             m_mesh.uv = new Vector2[] {
                 new Vector2(0, 1),
@@ -40,8 +40,8 @@ public struct skybox {
     {
         corners[0] = cam.ViewportToWorldPoint(new Vector3(0, 0, cam.farClipPlane));
         corners[1] = cam.ViewportToWorldPoint(new Vector3(1, 0, cam.farClipPlane));
-        corners[2] = cam.ViewportToWorldPoint(new Vector3(1, 1, cam.farClipPlane));
-        corners[3] = cam.ViewportToWorldPoint(new Vector3(0, 1, cam.farClipPlane));
+        corners[2] = cam.ViewportToWorldPoint(new Vector3(0, 1, cam.farClipPlane));
+        corners[3] = cam.ViewportToWorldPoint(new Vector3(1, 1, cam.farClipPlane));
 
         skyboxMaterial.SetVectorArray(_Corners, corners);
         skyboxMaterial.SetPass(0);

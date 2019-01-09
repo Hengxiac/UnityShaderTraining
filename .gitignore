@@ -4,3 +4,5 @@ Library/*
 Packages/
 .vs/*
 obj/*
+/Assets/Material/bgImg.hdr
+/Assets/Material/bgImg.hdr.meta
