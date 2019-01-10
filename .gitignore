@@ -6,3 +6,4 @@ Packages/
 obj/*
 /Assets/Material/bgImg.hdr
 /Assets/Material/bgImg.hdr.meta
+*meta
